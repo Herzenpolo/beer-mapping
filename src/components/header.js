@@ -24,7 +24,7 @@ const BeerList = (props) => {
               <NavLink href="Cocktail-Recipes">Cocktail Recipes</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="BBQ-recipes">BBQ Recipes</NavLink>
+              <NavLink href="recipes">Recipes</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
