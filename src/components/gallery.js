@@ -2,14 +2,31 @@ import React, { Component } from 'react';
 
 
 class Gallery extends Component {
-    render() {
+
+    componentDidMount=()=> {
         console.log(this.props)
+    }
+
+ gallery = () => {
+     return this .props.gallery.map(eachPhoto => {
+         return (
+             <ul>
+                 <li key={eachPhoto.id}>
+                     <img src={eachPhoto.src.small} alt={eachPhoto.id}/>
+                 </li>
+             </ul>
+         )
+     })
+ }
+
+    render() {
+ console.log(this.props.gallery)
         return (
             <div>
-                These are pictures
+            {this.gallery()}
             </div>
         );
     }
 }
 
-export default Gallery;
+export default Gallery

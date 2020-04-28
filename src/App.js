@@ -20,10 +20,10 @@ class App extends Component {
 state = {
   allBreweries : [],
   allCities: [],
-  locationCity: 'Miami',
-  locationState: 'Florida',
+  locationCity: 'Los Angeles',
+  locationState: 'California',
   imgSrc: [],
-  imgSearch: 'Cold beer'
+  imgSearch: 'Florida Brewery'
 }  
 
 componentDidMount = () => {
@@ -34,7 +34,7 @@ componentDidMount = () => {
       Authorization: yelpKey
     },
     params: {
-      // limit: 50,
+      limit: 50,
       categories: `bars`,
       location: {
         city: this.state.locationCity,
@@ -49,7 +49,7 @@ componentDidMount = () => {
   }
 
   })
-  .then(res=> this.setState({allBreweries:res.data}))
+  .then(res=> this.setState({allBreweries:res.data.businesses}))
   .catch(err => console.log(err))
 
   Axios.get(pexelsUrl, {
@@ -60,13 +60,15 @@ componentDidMount = () => {
       query: this.state.imgSearch
     }
   })
-  .then(res2 => this.setState({imgSrc:res2.data}))
+  .then(res2 => this.setState({imgSrc:res2.data.photos}))
   .catch(err2 => console.log(err2))
 
+  
 }
 
+
 render(){
-  
+
   return (
     <div>
       <Header/>
@@ -74,7 +76,7 @@ render(){
         breweries = {this.state.allBreweries}
       />
       <Gallery
-        Gallery = {this.state.imgSrc}
+        gallery = {this.state.imgSrc}
       />
     </div>
   );
