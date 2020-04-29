@@ -7,6 +7,8 @@ import Header from "./components/header";
 import { Switch, Route } from "react-router-dom";
 import Cocktails from './components/cocktails'
 import Recipes from './components/recipes'
+import Home from './components/home'
+import BeersDetails from './components/BeersDetail'
 
 let punkUrl = "https://api.punkapi.com/v2/beers";
 
@@ -85,13 +87,27 @@ class App extends Component {
       <div>
         
         <Header />
-
+        
         <Switch>
+        <Route
+            exact
+            path="/"
+            render={(props) => (
+              <Home {...props} beers = {this.state.filteredBeers}/>
+            )}
+          /> 
           <Route
             exact
             path="/Beer-Look-Up"
             render={(props) => (
               <Beers {...props} beers = {this.state.filteredBeers} beerSearch = {this.beerSearch}/>
+            )}
+          /> 
+          <Route
+            exact
+            path="/Beer/:id"
+            render={(props) => (
+              <BeersDetails {...props} beers = {this.state.filteredBeers} beerSearch = {this.beerSearch}/>
             )}
           /> 
           <Route

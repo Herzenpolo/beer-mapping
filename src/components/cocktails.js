@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { ListGroup, ListGroupItem } from "reactstrap";
 import Axios from "axios";
+import { Link } from "react-router-dom"
 
 let cocktailUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?";
 let cocktailKey = "1";
@@ -16,7 +17,7 @@ class Cocktails extends Component {
     return cocktails.map((eachCocktail) => {
       return (
         <ListGroup key={eachCocktail.strDrink}>
-          <ListGroupItem>{eachCocktail.strDrink}</ListGroupItem>
+          <ListGroupItem><Link to = {`/Cocktail-Recipes/${eachCocktail.strDrink}`}>{eachCocktail.strDrink}</Link></ListGroupItem>
         </ListGroup>
       );
     });
@@ -43,6 +44,7 @@ class Cocktails extends Component {
   
 
   render() {
+    console.log(this.state)
     return (
       <div>
         <form onSubmit={this.cocktailSearchNew}>

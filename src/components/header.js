@@ -18,13 +18,13 @@ const BeerList = (props) => {
               <NavLink href="/">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="Beer-Look-Up">Beer</NavLink>
+              <NavLink href="/Beer-Look-Up">Beer</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="Cocktail-Recipes">Cocktail Recipes</NavLink>
+              <NavLink href="/Cocktail-Recipes">Cocktail Recipes</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="recipes">Recipes</NavLink>
+              <NavLink href="/recipes">Recipes</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
