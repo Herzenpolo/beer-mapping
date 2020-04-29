@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { ListGroup, ListGroupItem } from "reactstrap";
 
 class Beers extends Component {
+  
   displayBeers = () => {
     let beers = [...this.props.beers];
     return beers.map((eachBeer) => {
@@ -13,10 +14,14 @@ class Beers extends Component {
     });
   };
 
+beerSearch = (e) => {
+  console.log(e.target.value)
+}
+
   render() {
     return (
       <div>
-        <input type="text" placeholder="Search Beers!"></input>
+        <input type="text" placeholder="Search Beers!" onChange={(e) => this.props.beerSearch(e)}></input>
         {this.displayBeers()}
       </div>
     );
