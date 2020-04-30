@@ -9,7 +9,8 @@ import Cocktails from "./components/cocktails";
 import Recipes from "./components/recipes";
 import Home from "./components/home";
 import BeersDetails from "./components/BeersDetail";
-import './Reich/reich.ttf'
+import "./Reich/reich.ttf";
+import CocktailRecipe from "./components/cocktailRecipe";
 
 let punkUrl = "https://api.punkapi.com/v2/beers";
 
@@ -66,8 +67,8 @@ class App extends Component {
         app_key: emamKey,
       },
     })
-      .then((res4) => this.setState({recipes:res4.data}))
-      .catch((err4) => console.log(err4))
+      .then((res4) => this.setState({ recipes: res4.data }))
+      .catch((err4) => console.log(err4));
   };
 
   beerSearch = (e) => {
@@ -125,9 +126,18 @@ class App extends Component {
           />
           <Route
             exact
+            path="/Cocktail-Recipes/:id"
+            render={(props) => <CocktailRecipe {...props} />}
+          />
+          <Route
+            exact
             path="/recipes"
             render={(props) => (
-              <Recipes {...props} recipeQuery={this.state.recipeQuery} recipes = {this.state.recipes}/>
+              <Recipes
+                {...props}
+                recipeQuery={this.state.recipeQuery}
+                recipes={this.state.recipes}
+              />
             )}
           />
         </Switch>
