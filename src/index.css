@@ -8,6 +8,11 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,
     monospace;
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: local('MyFont'), url('./Reich/reich.ttf');
 }
