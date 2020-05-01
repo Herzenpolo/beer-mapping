@@ -9,8 +9,9 @@ import Cocktails from "./components/cocktails";
 import Recipes from "./components/recipes";
 import Home from "./components/home";
 import BeersDetails from "./components/BeersDetail";
-import "./Reich/reich.ttf";
+import "./components/Kalos/Kalos.ttf";
 import CocktailRecipe from "./components/cocktailRecipe";
+import './components/blindmelon/BLINDMELON.TTF'
 
 let punkUrl = "https://api.punkapi.com/v2/beers";
 
@@ -28,10 +29,8 @@ class App extends Component {
   state = {
     allBeers: [],
     filteredBeers: [],
-    // cocktails: [],
-    // consktailQuery: '',
     imgSrc: [],
-    imgSearch: "duck",
+    imgSearch: "Barbecue",
     recipeQuery: "Brisket",
     recipes: [],
   };
@@ -91,7 +90,7 @@ class App extends Component {
             exact
             path="/"
             render={(props) => (
-              <Home {...props} beers={this.state.filteredBeers} />
+              <Home {...props} beers={this.state.filteredBeers} gallery = {this.state.imgSrc}/>
             )}
           />
           <Route
@@ -141,6 +140,7 @@ class App extends Component {
             )}
           />
         </Switch>
+        <iframe src="https://open.spotify.com/embed/playlist/2l7PzKhvRPBbCEcr9zf2S7?si=rvZ7d1EFRzGcAqk0b6QM4Q" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         {/* <Gallery
         gallery = {this.state.imgSrc}
       /> */}

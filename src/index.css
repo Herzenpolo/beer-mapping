@@ -14,5 +14,11 @@ code {
 
 @font-face {
   font-family: 'MyFont';
-  src: local('MyFont'), url('./Reich/reich.ttf');
+  src: local('MyFont'), url('./components/Kalos/Kalos.ttf');
 }
+
+@font-face {
+  font-family: 'Headers';
+  src: local('Headers'), url('./components/blindmelon/BLINDMELON.TTF');
+}
+
