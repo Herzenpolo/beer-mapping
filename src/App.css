@@ -55,3 +55,98 @@ h1, h2, h3, h4, h5, .navbar-brand {
   font-family: 'Headers' !important;
 }
 
+.cocktailThumb {
+  width: 75px !important;
+  border-radius: 10% !important;
+}
+
+.list-group-item {
+  text-align: center;
+}
+
+.foodImg {
+  margin-top: 10px !important;
+  width: 100px !important;
+  border-radius: 10% !important;
+}
+
+.recipe-link {
+  color: white !important;
+} 
+
+.recipe-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipeBtn {
+  width: 100% !important;
+  margin-bottom: 0em !important;
+}
+
+.card-body {
+  width: 100% !important;
+}
+
+.letter-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drinkTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+add-new-beer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drink-ingredients {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.drink-instructions {
+  text-align: center;
+}
+
+add-beer-form {
+  width: 100%;
+}
+
+.item-of-the-day {
+  text-align: center;
+  margin-top: 10px !important;
+}
+
+.homeCard {
+  border: none !important;
+  
+}
+
+.dailyBtn {
+  background: orange !important;
+  border: none !important;
+}
+
+.drink-img {
+  width: 200px;
+  border-radius: 10%;
+  
+}
+
+.drinkRecipe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

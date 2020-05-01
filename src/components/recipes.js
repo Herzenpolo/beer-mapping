@@ -3,9 +3,14 @@ import Axios from "axios";
 import { ListGroup, ListGroupItem } from "reactstrap";
 import { Link } from "react-router-dom";
 import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
-} from 'reactstrap';
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button,
+} from "reactstrap";
 
 let emamKey = "822cb20fa26d9dc7add797be8364c7d7";
 let emamAppId = "5ee788d0";
@@ -39,16 +44,19 @@ class Recipes extends Component {
     console.log(recipes);
     return recipes.map((eachRecipe) => {
       return (
-        <Card>
+        <Card className = 'recipe-card'>
           <CardImg
+            className="foodImg"
             top
-            width="100%"
+            width="50%"
             src={eachRecipe.recipe.image}
             alt="Card image cap"
           />
           <CardBody>
             <CardTitle>{eachRecipe.recipe.label}</CardTitle>
-            <a href = {eachRecipe.recipe.url}>Recipe!</a>
+            <Button color="success" className="recipeBtn">
+              <a className = "recipe-link" href={eachRecipe.recipe.url}>Recipe!</a>
+            </Button>{" "}
           </CardBody>
         </Card>
       );

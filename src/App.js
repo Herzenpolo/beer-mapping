@@ -30,7 +30,7 @@ class App extends Component {
     allBeers: [],
     filteredBeers: [],
     imgSrc: [],
-    imgSearch: "Barbecue",
+    imgSearch: "Brewery",
     recipeQuery: "Brisket",
     recipes: [],
   };
@@ -140,10 +140,6 @@ class App extends Component {
             )}
           />
         </Switch>
-        <iframe src="https://open.spotify.com/embed/playlist/2l7PzKhvRPBbCEcr9zf2S7?si=rvZ7d1EFRzGcAqk0b6QM4Q" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        {/* <Gallery
-        gallery = {this.state.imgSrc}
-      /> */}
       </div>
     );
   }
