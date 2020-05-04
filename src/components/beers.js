@@ -25,17 +25,17 @@ state = {
 
   clickMethod = () => this.setState({addBeer:!this.state.addBeer })
   
-  beerSubmit = (e) => {
-    e.preventDefault()
-    console.log(e.target.value)
-    let newBeer = {
-      name: e.target.name.value,
-      abv: e.target.abv.value,
-      tagline: e.target.tagline.value,
-      food_pairing: [e.target.food_pairing.value]
-    }
-    console.log(newBeer)
-  }
+  // beerSubmit = (e) => {
+  //   e.preventDefault()
+  //   console.log(e.target.value)
+  //   let newBeer = {
+  //     name: e.target.name.value,
+  //     abv: e.target.abv.value,
+  //     tagline: e.target.tagline.value,
+  //     food_pairing: [e.target.food_pairing.value]
+  //   }
+    
+  // }
 
   addBeerForm = () => {
     if(this.state.addBeer) {

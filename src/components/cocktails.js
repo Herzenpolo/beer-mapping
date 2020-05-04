@@ -13,6 +13,7 @@ class Cocktails extends Component {
   };
 
   displayCocktail = () => {
+    if(this.state.cocktails !== null){
     let cocktails = [...this.state.cocktails];
     return cocktails.map((eachCocktail) => {
       return (
@@ -34,6 +35,9 @@ class Cocktails extends Component {
         </ListGroup>
       );
     });
+  } else {
+    return ('no cocktails')
+  }
   };
 
   clickMethod = (e) => {

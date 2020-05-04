@@ -11,7 +11,7 @@ import Home from "./components/home";
 import BeersDetails from "./components/BeersDetail";
 import "./components/Kalos/Kalos.ttf";
 import CocktailRecipe from "./components/cocktailRecipe";
-import './components/blindmelon/BLINDMELON.TTF'
+import "./components/blindmelon/BLINDMELON.TTF";
 
 let punkUrl = "https://api.punkapi.com/v2/beers";
 
@@ -66,12 +66,11 @@ class App extends Component {
     //     q: this.state.recipeQuery,
     //     app_id: emamAppId,
     //     app_key: emamKey,
-  //     },
-  //   })
-  //     .then((res4) => this.setState({ recipes: res4.data }))
-  //     .catch((err4) => console.log(err4));
+    //     },
+    //   })
+    //     .then((res4) => this.setState({ recipes: res4.data }))
+    //     .catch((err4) => console.log(err4));
   };
-
 
   beerSearch = (e) => {
     let beers = [...this.state.allBeers];
@@ -83,18 +82,20 @@ class App extends Component {
   };
 
   beerSubmit = (e) => {
-    e.preventDefault()
-    console.log(e.target.value)
+    e.preventDefault();
+    console.log(e.target.value);
     let newBeer = {
       name: e.target.name.value,
       abv: e.target.abv.value,
       tagline: e.target.tagline.value,
-      food_pairing: [e.target.food_pairing.value]
-    }
-    console.log(newBeer)
-    let newBeerArr = [...this.state.beersArr]
-    this.setState({allBeers : newBeerArr})
-  }
+      food_pairing: [e.target.food_pairing.value],
+    };
+    console.log(newBeer);
+    let newBeerArr = [...this.state.beersArr];
+    this.setState({ allBeers: newBeerArr });
+  };
+
+  
   render() {
     console.log(this.state);
     return (
@@ -106,7 +107,12 @@ class App extends Component {
             exact
             path="/"
             render={(props) => (
-              <Home {...props} beers={this.state.filteredBeers} gallery = {this.state.imgSrc}/>
+              <Home
+                {...props}
+                beers={this.state.filteredBeers}
+                gallery={this.state.imgSrc}
+                beersArr={this.state.allBeers}
+              />
             )}
           />
           <Route

@@ -2,11 +2,22 @@ import React, { Component } from "react";
 import { Jumbotron, Container } from "reactstrap";
 import { Button } from "reactstrap";
 import { Link } from "react-router-dom";
-import Axios from "axios";
+
 
 
 class BeersDetail extends Component {
 
+  // state = {
+  //   beerObj: {}
+  // }
+
+  // componentDidMount = async () => {
+  //   let beerId = await this.props.match.params.id;
+  //   let beerObj = await this.props.beers.find((eachBeer) => eachBeer.name === beerId);
+  
+  //   console.log(beerObj);
+  //   this.setState({beerObj:beerObj})
+  // }
 
 
   render() {
