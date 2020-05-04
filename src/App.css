@@ -156,5 +156,9 @@ add-beer-form {
 }
 
 .header-link {
-  color: white !important;
+  color: gray !important;
 }
+
+ .header-link:hover {
+   color: orange !important
+ }
