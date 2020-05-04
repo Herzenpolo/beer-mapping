@@ -10,7 +10,7 @@ const BeerList = (props) => {
   return (
     <div>
       <Navbar color="faded" light>
-        <NavbarBrand href="/" className="mr-auto">Herzen's Vice</NavbarBrand>
+        <NavbarBrand href="/" className="mr-auto">Bubble 'n' Salt</NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>

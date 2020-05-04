@@ -19,11 +19,11 @@ class Cocktails extends Component {
         <ListGroup key={eachCocktail.strDrink}>
           <ListGroupItem>
             <Link
-              class="cocktail-list"
+              className="cocktail-list"
               to={`/Cocktail-Recipes/${eachCocktail.strDrink}`}
             >
               <img
-                class="cocktailThumb"
+                className="cocktailThumb"
                 src={eachCocktail.strDrinkThumb}
                 alt={eachCocktail.strDrink}
               />

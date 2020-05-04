@@ -34,11 +34,6 @@ class BeersDetail extends Component {
         ) : (
           "Loading..."
         )}
-        <img
-          className="beer-pic"
-          src={beerObj.image_url}
-          alt={beerObj.name}
-        ></img>
         <section>
           <Button color="danger">
             <Link className="back-link" to="/Beer-Look-Up">

@@ -150,3 +150,7 @@ add-beer-form {
   align-items: center;
   justify-content: center;
 }
+
+.RandoHome {
+  color: white !important;
+}

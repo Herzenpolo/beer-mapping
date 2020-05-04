@@ -25,7 +25,7 @@ class Recipes extends Component {
     e.preventDefault();
     console.log(this.state);
     Axios.get(
-      `https://api.edamam.com/search?q=${this.state.q}&app_id=${emamAppId}&app_key=${emamKey}`
+      `https://api.edamam.com/search?q=${this.state.q}&app_id=${emamAppId}&app_key=${emamKey}&from=0&to=100`
       // q: this.state.q,
       // app_id: emamAppId,
       // app_key: emamKey,
@@ -44,7 +44,7 @@ class Recipes extends Component {
     console.log(recipes);
     return recipes.map((eachRecipe) => {
       return (
-        <Card className = 'recipe-card'>
+        <Card className = 'recipe-card' key = {eachRecipe.recipe.label}>
           <CardImg
             className="foodImg"
             top
