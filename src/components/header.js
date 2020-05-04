@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import {Link} from 'react-router-dom'
 
 const BeerList = (props) => {
   const [collapsed, setCollapsed] = useState(true);
@@ -18,7 +19,7 @@ const BeerList = (props) => {
               <NavLink href="/">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/Beer-Look-Up">Beer</NavLink>
+              <Link to="/Beer-Look-Up">Beer</Link>
             </NavItem>
             <NavItem>
               <NavLink href="/Cocktail-Recipes">Cocktail Recipes</NavLink>

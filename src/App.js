@@ -82,6 +82,19 @@ class App extends Component {
     this.setState({ filteredBeers: beersArr });
   };
 
+  beerSubmit = (e) => {
+    e.preventDefault()
+    console.log(e.target.value)
+    let newBeer = {
+      name: e.target.name.value,
+      abv: e.target.abv.value,
+      tagline: e.target.tagline.value,
+      food_pairing: [e.target.food_pairing.value]
+    }
+    console.log(newBeer)
+    let newBeerArr = [...this.state.beersArr]
+    this.setState({allBeers : newBeerArr})
+  }
   render() {
     console.log(this.state);
     return (
@@ -104,6 +117,7 @@ class App extends Component {
                 {...props}
                 beers={this.state.filteredBeers}
                 beerSearch={this.beerSearch}
+                beerSubmit={this.beerSubmit}
               />
             )}
           />
