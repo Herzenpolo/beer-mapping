@@ -36,7 +36,7 @@ class Cocktails extends Component {
       );
     });
   } else {
-    return ('no cocktails')
+    alert ('no cocktails starting with this letter, select another')
   }
   };
 
