@@ -13,7 +13,7 @@ state = {
     return beers.map((eachBeer) => {
       return (
         <ListGroup key = {eachBeer.name}>
-          <ListGroupItem><Link to = {`/beer/${eachBeer.name}`}>{eachBeer.name}</Link></ListGroupItem>
+          <ListGroupItem><Link className = "beerList"to = {`/beer/${eachBeer.name}`}>{eachBeer.name}</Link></ListGroupItem>
         </ListGroup>
       );
     });

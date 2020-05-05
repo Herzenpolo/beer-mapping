@@ -48,11 +48,11 @@ class BeersDetail extends Component {
             <div>
               <Jumbotron fluid>
                 <Container fluid>
-                  <h1 className="display-3">{this.state.beer_name}</h1>
-                  <h4>ABV: {this.state.abv}</h4>
-                  <p className="lead">
-                    {this.state.description} <br></br>
-                    Food pairings: {this.state.food_pairing}
+                  <h1 className="display-3 beer-details">{this.state.beer_name}</h1>
+                  <h4 className="beer-details">ABV: {this.state.abv}</h4>
+                  <p className="lead beer-details">
+                    {this.state.description} <br></br> <br></br>
+                    Food pairings: {this.state.foodPairings}
                   </p>
                 </Container>
               </Jumbotron>
@@ -61,8 +61,8 @@ class BeersDetail extends Component {
         ) : (
           "Loading..."
         )}
-        <section>
-          <Button color="danger">
+        <section className = "back-section">
+          <Button className = "back-link-btn" color="danger">
             <Link className="back-link" to="/Beer-Look-Up">
               Back
             </Link>

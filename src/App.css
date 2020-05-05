@@ -40,6 +40,18 @@
 
 .back-link {
   color: white !important;
+  
+}
+
+.back-link-btn {
+  width: 90% !important;
+  
+}
+
+.back-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .beer-pic {
@@ -153,6 +165,12 @@ add-beer-form {
 
 .RandoHome {
   color: white !important;
+  background-color: orange !important;
+  height: 36px !important;
+  border-radius: 10px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-link {
@@ -161,4 +179,30 @@ add-beer-form {
 
  .header-link:hover {
    color: orange !important
+ }
+
+ .item-of-the-day-name {
+   font-size: 1.5em !important;
+ }
+
+ .beerList {
+   color: grey !important;
+ }
+
+ .beerList:hover {
+   animation: all;
+   transition: 0.3s;
+   color: orange !important;
+   text-decoration: underline 1px orange !important;
+ }
+
+ .beer-details {
+   text-align: center;
+ }
+
+ .letter-selector-btn {
+   background: none !important;
+   border: none !important;
+   margin: 0.2em !important;
+   padding: 0em !important
  }

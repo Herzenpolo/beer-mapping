@@ -78,7 +78,10 @@ class Home extends Component {
   };
 
   onClickCocktail = (e) => {
-    console.log(e.target);
+    console.log(e.target); 
+    return (
+      <Link to={`/Cocktail-Recipes/${this.state.randoDrink.strDrink}`}></Link>
+    )
   };
   
 
@@ -90,39 +93,39 @@ class Home extends Component {
         <UncontrolledCarousel items={this.state.imgSrc} />
         <h5 className="item-of-the-day">Beer of the day</h5>
         <Card body className="text-center homeCard">
-          <CardTitle>{this.state.randoBeer.name}</CardTitle>
-          <Button className="dailyBtn">
+          <CardTitle className = "item-of-the-day-name" >{this.state.randoBeer.name}</CardTitle>
+         
             <Link
-              className="RandoHome"
+              className="RandoHome dailyBtn"
               to={`/beer/${this.state.randoBeer.name}`}
             >
               {" "}
-              Carck Open!{" "}
+              Crack Open!{" "}
             </Link>
-          </Button>
+          
         </Card>
-        <h5 className="item-of-the-day">Cocktail of the day</h5>
+        <h5 className="item-of-the-day">Drink of the day</h5>
         <Card body className="text-center homeCard">
-          <CardTitle>{this.state.randoDrink.strDrink}</CardTitle>
-          <Button className="dailyBtn">
+          <CardTitle className = "item-of-the-day-name">{this.state.randoDrink.strDrink}</CardTitle>
+          
             <Link
-              className="RandoHome"
+              className="RandoHome dailyBtn"
               to={`/Cocktail-Recipes/${this.state.randoDrink.strDrink}`}
             >
               {" "}
               Recipe!{" "}
             </Link>
-          </Button>
+          
         </Card>
         <h5 className="item-of-the-day">Recipe of the day</h5>
         <Card body className="text-center homeCard">
-          <CardTitle> {this.state.recipesLabel} </CardTitle>
-          <Button className="dailyBtn">
+          <CardTitle className = "item-of-the-day-name"> {this.state.recipesLabel} </CardTitle>
+         
             {" "}
-            <a className="RandoHome" href={this.state.recipeUrl}>
+            <a className="RandoHome dailyBtn" href={this.state.recipeUrl}>
               Recipe!
             </a>
-          </Button>
+          
         </Card>
       </div>
     );

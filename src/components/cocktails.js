@@ -74,84 +74,84 @@ class Cocktails extends Component {
           </form>
         </section>
         <section className="letter-selector">
-          <button value="A" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="A" onClick={(e) => this.clickMethod(e)}>
             A
           </button>
-          <button value="B" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="B" onClick={(e) => this.clickMethod(e)}>
             B
           </button>
-          <button value="C" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="C" onClick={(e) => this.clickMethod(e)}>
             C
           </button>
-          <button value="D" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="D" onClick={(e) => this.clickMethod(e)}>
             D
           </button>
-          <button value="E" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="E" onClick={(e) => this.clickMethod(e)}>
             E
           </button>
-          <button value="F" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="F" onClick={(e) => this.clickMethod(e)}>
             F
           </button>
-          <button value="G" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="G" onClick={(e) => this.clickMethod(e)}>
             G
           </button>
-          <button value="H" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="H" onClick={(e) => this.clickMethod(e)}>
             H
           </button>
-          <button value="I" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="I" onClick={(e) => this.clickMethod(e)}>
             I
           </button>
-          <button value="J" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="J" onClick={(e) => this.clickMethod(e)}>
             J
           </button>
-          <button value="K" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="K" onClick={(e) => this.clickMethod(e)}>
             K
           </button>
-          <button value="L" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="L" onClick={(e) => this.clickMethod(e)}>
             L
           </button>
-          <button value="M" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="M" onClick={(e) => this.clickMethod(e)}>
             M
           </button>
-          <button value="N" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="N" onClick={(e) => this.clickMethod(e)}>
             N
           </button>
         </section>
         <section className="letter-selector">
-          <button value="O" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="O" onClick={(e) => this.clickMethod(e)}>
             O
           </button>
-          <button value="P" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="P" onClick={(e) => this.clickMethod(e)}>
             P
           </button>
-          <button value="Q" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="Q" onClick={(e) => this.clickMethod(e)}>
             Q
           </button>
-          <button value="R" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="R" onClick={(e) => this.clickMethod(e)}>
             R
           </button>
-          <button value="S" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="S" onClick={(e) => this.clickMethod(e)}>
             S
           </button>
-          <button value="T" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="T" onClick={(e) => this.clickMethod(e)}>
             T
           </button>
-          <button value="U" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="U" onClick={(e) => this.clickMethod(e)}>
             U
           </button>
-          <button value="V" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="V" onClick={(e) => this.clickMethod(e)}>
             V
           </button>
-          <button value="W" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="W" onClick={(e) => this.clickMethod(e)}>
             W
           </button>
-          <button value="X" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="X" onClick={(e) => this.clickMethod(e)}>
             X
           </button>
-          <button value="Y" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="Y" onClick={(e) => this.clickMethod(e)}>
             Y
           </button>
-          <button value="Z" onClick={(e) => this.clickMethod(e)}>
+          <button className = "letter-selector-btn" value="Z" onClick={(e) => this.clickMethod(e)}>
             Z
           </button>
         </section>
