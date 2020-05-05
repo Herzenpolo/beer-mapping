@@ -40,7 +40,11 @@
 
 .back-link {
   color: white !important;
-  
+  background: red !important;
+  height: 36px !important;
+  border-radius: 10px !important;
+  text-align: center;
+  font-size: 1.5em;
 }
 
 .back-link-btn {

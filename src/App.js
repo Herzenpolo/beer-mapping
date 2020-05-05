@@ -97,8 +97,6 @@ class App extends Component {
     this.setState({ allBeers: newBeerArr });
   };
 
-
-
   render() {
     console.log(this.state);
     return (
@@ -171,3 +169,12 @@ class App extends Component {
   }
 }
 export default App;
+
+
+// Axios.post("https://ironrest.herokuapp.com/bubblesnsalt",{name:'Corona'})
+// .then((res) => console.log(res))
+
+// Axios.get("https://ironrest.herokuapp.com/bubblesnsalt")
+// .then((res) => console.log(res))
+
+// Axios.delete("https://ironrest.herokuapp.com/deleteCollection/bubblesnsalt")

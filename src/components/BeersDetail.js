@@ -33,8 +33,10 @@ class BeersDetail extends Component {
     })
     .then((res) => this.setState({beerObj:res.data[0], beer_name:res.data[0].name, abv:res.data[0].abv, description:res.data[0].description, foodPairings:res.data[0].food_pairing[0]}))
     .catch((err) => console.log(err))
+    
   }
 
+  
 
   render() {
     console.log(this.state)
@@ -62,11 +64,11 @@ class BeersDetail extends Component {
           "Loading..."
         )}
         <section className = "back-section">
-          <Button className = "back-link-btn" color="danger">
-            <Link className="back-link" to="/Beer-Look-Up">
+          
+            <Link className="back-link back-link-btn" to="/Beer-Look-Up">
               Back
             </Link>
-          </Button>{" "}
+          
         </section>
       </div>
     );
@@ -74,3 +76,18 @@ class BeersDetail extends Component {
 }
 
 export default BeersDetail;
+
+
+
+
+
+
+
+
+// Axios.post("https://ironrest.herokuapp.com/bubblesnsalt",{name:"Corona"})
+// .then((res) => console.log(res))
+
+// Axios.get("https://ironrest.herokuapp.com/bubblesnsalt")
+// .then((res) => console.log(res))
+
+// Axios.delete(`https://ironrest.herokuapp.com/deleteCollection/bubblesnsalt`)

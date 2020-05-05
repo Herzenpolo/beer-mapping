@@ -1,12 +1,17 @@
 import React, { Component } from "react";
 import { ListGroup, ListGroupItem } from "reactstrap";
 import {Link} from 'react-router-dom'
+import Axios from 'axios'
 
 class Beers extends Component {
 
 state = {
   addBeer : false
 }
+
+
+// Axios.post("https://ironrest.herokuapp.com/bubblesnsalt",{name:this.props.beers[0].name})
+
 
   displayBeers = () => {
     let beers = [...this.props.beers];
@@ -36,6 +41,7 @@ state = {
   //   }
     
   // }
+
 
   addBeerForm = () => {
     if(this.state.addBeer) {
@@ -73,3 +79,4 @@ state = {
 }
 
 export default Beers;
+

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import { Jumbotron, Container } from "reactstrap";
-import {Button} from 'reactstrap'
-import {Link} from "react-router-dom"
+import { Button } from "reactstrap";
+import { Link } from "react-router-dom";
 
 let cocktailUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?";
 let cocktailKey = "1";
@@ -64,11 +64,9 @@ class CocktailRecipe extends Component {
           {this.getInstructions()}
         </section>
         <section className="back-section">
-          <Button className="back-link-btn" color="danger">
-            <Link className="back-link" to="/Cocktail-Recipes">
-              Back
-            </Link>
-          </Button>{" "}
+          <Link className="back-link back-link-btn" to="/Cocktail-Recipes">
+            Back
+          </Link>
         </section>
       </div>
     );
