@@ -1,24 +1,24 @@
 import React, { Component } from "react";
 import { ListGroup, ListGroupItem } from "reactstrap";
-import {Link} from 'react-router-dom'
-
+import { Link } from "react-router-dom";
 
 class Beers extends Component {
+  state = {
+    addBeer: false,
+  };
 
-state = {
-  addBeer : false
-}
-
-
-// Axios.post("https://ironrest.herokuapp.com/bubblesnsalt",{name:this.props.beers[0].name})
-
+  // Axios.post("https://ironrest.herokuapp.com/bubblesnsalt",{name:this.props.beers[0].name})
 
   displayBeers = () => {
     let beers = [...this.props.beers];
     return beers.map((eachBeer) => {
       return (
-        <ListGroup key = {eachBeer.name}>
-          <ListGroupItem><Link className = "beerList"to = {`/beer/${eachBeer.name}`}>{eachBeer.name}</Link></ListGroupItem>
+        <ListGroup key={eachBeer.name}>
+          <ListGroupItem>
+            <Link className="beerList" to={`/beer/${eachBeer.name}`}>
+              {eachBeer.name}
+            </Link>
+          </ListGroupItem>
         </ListGroup>
       );
     });
@@ -29,7 +29,7 @@ state = {
   };
 
   // clickMethod = () => this.setState({addBeer:!this.state.addBeer })
-  
+
   // beerSubmit = (e) => {
   //   e.preventDefault()
   //   console.log(e.target.value)
@@ -39,9 +39,8 @@ state = {
   //     tagline: e.target.tagline.value,
   //     food_pairing: [e.target.food_pairing.value]
   //   }
-    
-  // }
 
+  // }
 
   // addBeerForm = () => {
   //   if(this.state.addBeer) {
@@ -59,13 +58,12 @@ state = {
   //   }
   // }
 
-
-
   render() {
-    console.log(this.state)
+    console.log(this.state);
     return (
       <div>
         <input
+          className="recipeSearch"
           type="text"
           placeholder="Search Beers!"
           onChange={(e) => this.props.beerSearch(e)}
@@ -79,4 +77,3 @@ state = {
 }
 
 export default Beers;
-
