@@ -97,6 +97,8 @@ class App extends Component {
     this.setState({ allBeers: newBeerArr });
   };
 
+
+
   render() {
     console.log(this.state);
     return (

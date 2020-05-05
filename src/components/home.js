@@ -97,7 +97,7 @@ class Home extends Component {
               to={`/beer/${this.state.randoBeer.name}`}
             >
               {" "}
-              Recipe!{" "}
+              Carck Open!{" "}
             </Link>
           </Button>
         </Card>
