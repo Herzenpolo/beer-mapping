@@ -13,12 +13,14 @@ let cocktailKey = "1";
 let emamKey = "822cb20fa26d9dc7add797be8364c7d7";
 let emamAppId = "5ee788d0";
 
+let beerUrl = 'https://api.punkapi.com/v2/beers/random'
+
 class Home extends Component {
   state = {
     imgSearch: "Steak",
     imgSrc: [],
     randoDrink: [],
-    randoBeer: {},
+    randoBeer: [],
     recipes: {},
     recipesLabel: "",
     recipeUrl: "",
@@ -57,7 +59,11 @@ class Home extends Component {
       )
       .catch((err) => console.log(err));
 
-      // this.setState({randoBeer : this.props.beersArr[Math.floor(Math.random()*this.props.beersArr.length)]})
+      Axios.get(beerUrl)
+      .then((res4) => this.setState({randoBeer:res4.data[0]}))
+      .catch((err4) => console.log(err4))
+      
+
   };
 
   displayPictures = (res) => {
@@ -76,15 +82,25 @@ class Home extends Component {
   };
   
 
-  
 
   render() {
-    console.log(this.props.beersArr[Math.floor(Math.random()*this.props.beersArr.length)])
+    console.log(this.state)
     return (
       <div>
         <UncontrolledCarousel items={this.state.imgSrc} />
         <h5 className="item-of-the-day">Beer of the day</h5>
-       
+        <Card body className="text-center homeCard">
+          <CardTitle>{this.state.randoBeer.name}</CardTitle>
+          <Button className="dailyBtn">
+            <Link
+              className="RandoHome"
+              to={`/beer/${this.state.randoBeer.name}`}
+            >
+              {" "}
+              Recipe!{" "}
+            </Link>
+          </Button>
+        </Card>
         <h5 className="item-of-the-day">Cocktail of the day</h5>
         <Card body className="text-center homeCard">
           <CardTitle>{this.state.randoDrink.strDrink}</CardTitle>

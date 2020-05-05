@@ -16,16 +16,16 @@ const BeerList = (props) => {
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <Link className = 'header-link' href="/">Home</Link>
+              <Link className = 'header-link' to="/">Home</Link>
             </NavItem>
             <NavItem>
               <Link className = 'header-link'to="/Beer-Look-Up">Beer</Link>
             </NavItem>
             <NavItem>
-              <Link className = 'header-link' href="/Cocktail-Recipes">Cocktail Recipes</Link>
+              <Link className = 'header-link' to="/Cocktail-Recipes">Cocktail Recipes</Link>
             </NavItem>
             <NavItem>
-              <Link className = 'header-link' href="/recipes">Recipes</Link>
+              <Link className = 'header-link' to="/recipes">Recipes</Link>
             </NavItem>
           </Nav>
         </Collapse>

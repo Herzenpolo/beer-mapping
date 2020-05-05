@@ -33,6 +33,7 @@ class App extends Component {
     imgSearch: "Brewery",
     recipeQuery: "Brisket",
     recipes: [],
+    randomBeer: []
   };
 
   componentDidMount = () => {
@@ -92,10 +93,10 @@ class App extends Component {
     };
     console.log(newBeer);
     let newBeerArr = [...this.state.beersArr];
+    newBeerArr.push(newBeerArr)
     this.setState({ allBeers: newBeerArr });
   };
 
-  
   render() {
     console.log(this.state);
     return (
