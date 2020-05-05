@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { ListGroup, ListGroupItem } from "reactstrap";
 import {Link} from 'react-router-dom'
-import Axios from 'axios'
+
 
 class Beers extends Component {
 
@@ -28,7 +28,7 @@ state = {
     console.log(e.target.value);
   };
 
-  clickMethod = () => this.setState({addBeer:!this.state.addBeer })
+  // clickMethod = () => this.setState({addBeer:!this.state.addBeer })
   
   // beerSubmit = (e) => {
   //   e.preventDefault()
@@ -43,21 +43,21 @@ state = {
   // }
 
 
-  addBeerForm = () => {
-    if(this.state.addBeer) {
-      return (
-        <section className = 'add-new-beer'>
-          <form onSubmit = {this.beerSubmit}>
-            <input className="add-beer-form" id='name' name='name' type = 'text' placeholder = 'Beer Name'/>
-            <input className="add-beer-form" id='abv' name='abv' type = 'text' placeholder= 'ABV'/>
-            <input className="add-beer-form" id='tagline' name='tagline' type = 'text' placeholder= 'Descriptions'/>
-            <input className="add-beer-form" id='food_pairing' name='food_pairing' type = 'text' placeholder= 'Food Pairings'/>
-            <input className="add-beer-form" type = 'submit'></input>
-          </form>
-        </section>
-      )
-    }
-  }
+  // addBeerForm = () => {
+  //   if(this.state.addBeer) {
+  //     return (
+  //       <section className = 'add-new-beer'>
+  //         <form onSubmit = {this.beerSubmit}>
+  //           <input className="add-beer-form" id='name' name='name' type = 'text' placeholder = 'Beer Name'/>
+  //           <input className="add-beer-form" id='abv' name='abv' type = 'text' placeholder= 'ABV'/>
+  //           <input className="add-beer-form" id='tagline' name='tagline' type = 'text' placeholder= 'Descriptions'/>
+  //           <input className="add-beer-form" id='food_pairing' name='food_pairing' type = 'text' placeholder= 'Food Pairings'/>
+  //           <input className="add-beer-form" type = 'submit'></input>
+  //         </form>
+  //       </section>
+  //     )
+  //   }
+  // }
 
 
 
@@ -70,8 +70,8 @@ state = {
           placeholder="Search Beers!"
           onChange={(e) => this.props.beerSearch(e)}
         ></input>
-        <button onClick={this.clickMethod}> Add Beer </button>
-        {this.addBeerForm()}
+        {/* <button onClick={this.clickMethod}> Add Beer </button> */}
+        {/* {this.addBeerForm()} */}
         {this.displayBeers()}
       </div>
     );

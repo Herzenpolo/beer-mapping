@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import Axios from "axios";
 import Beers from "./components/beers";
-import Gallery from "./components/gallery";
 import Header from "./components/header";
 import { Switch, Route } from "react-router-dom";
 import Cocktails from "./components/cocktails";
@@ -33,10 +32,15 @@ class App extends Component {
     imgSearch: "Brewery",
     recipeQuery: "Brisket",
     recipes: [],
-    randomBeer: []
+    randomBeer: [],
   };
 
   componentDidMount = () => {
+    // Axios.get(`https://ironrest.herokuapp.com/bubblesnsalt`)
+    // .then((res)=> this.setState({allBeers:res.data, filteredBeers:res.data}))
+    // .catch((err) => console.log(err))
+
+    
     Axios.get(punkUrl, {
       params: {
         per_page: 80,
@@ -93,7 +97,7 @@ class App extends Component {
     };
     console.log(newBeer);
     let newBeerArr = [...this.state.beersArr];
-    newBeerArr.push(newBeerArr)
+    newBeerArr.push(newBeerArr);
     this.setState({ allBeers: newBeerArr });
   };
 
@@ -170,6 +174,21 @@ class App extends Component {
 }
 export default App;
 
+// Axios.get(punkUrl, {
+//   params: {
+//     page: 2,
+//     per_page: 80,
+//   },
+// }).then((res) => {
+//   res.data.map((eachBeer) =>
+//     Axios.post("https://ironrest.herokuapp.com/bubblesnsalt", {
+//       name: eachBeer.name,
+//       abv: eachBeer.abv,
+//       description: eachBeer.description,
+//       foodPairing: eachBeer.food_pairing[0],
+//     })
+//   );
+// });
 
 // Axios.post("https://ironrest.herokuapp.com/bubblesnsalt",{name:'Corona'})
 // .then((res) => console.log(res))

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { UncontrolledCarousel } from "reactstrap";
 import Axios from "axios";
-import { Card, Button, CardTitle, CardText } from "reactstrap";
+import { Card, CardTitle } from "reactstrap";
 import { Link } from "react-router-dom";
 
 let pexelsUrl = "https://api.pexels.com/v1/search";
@@ -17,7 +17,7 @@ let beerUrl = 'https://api.punkapi.com/v2/beers/random'
 
 class Home extends Component {
   state = {
-    imgSearch: "Steak",
+    imgSearch: "barbecue",
     imgSrc: [],
     randoDrink: [],
     randoBeer: [],
@@ -133,3 +133,5 @@ class Home extends Component {
 }
 
 export default Home;
+
+

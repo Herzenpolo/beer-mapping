@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import { Jumbotron, Container } from "reactstrap";
-import { Button } from "reactstrap";
 import { Link } from "react-router-dom";
 
 let cocktailUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?";
