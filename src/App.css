@@ -218,9 +218,12 @@ add-beer-form {
   border-bottom: 1px orange !important;
  }
 
- .cocktailSearch {
-   border-top: none !important;
-   border-left: none !important;
-   border-right: none !important;
+ .recipeSearch{
+   border: none !important;
    text-align: center !important;
+   text-decoration: underline 1px grey !important;
+ }
+
+ .recipeSearchForm {
+   text-align: center;
  }

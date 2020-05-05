@@ -65,7 +65,7 @@ class Cocktails extends Component {
         <section className="letter-selector">
           <form onSubmit={this.cocktailSearchNew}>
             <input
-              className="cocktailSearch"
+              className="recipeSearch"
               type="text"
               placeholder="Search Cocktails!"
               onChange={(e) => this.onChangeMethod(e)}

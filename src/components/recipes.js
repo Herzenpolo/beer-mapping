@@ -1,14 +1,10 @@
 import React, { Component } from "react";
 import Axios from "axios";
-import { ListGroup, ListGroupItem } from "reactstrap";
-import { Link } from "react-router-dom";
 import {
   Card,
   CardImg,
-  CardText,
   CardBody,
   CardTitle,
-  CardSubtitle,
   Button,
 } from "reactstrap";
 
@@ -44,7 +40,7 @@ class Recipes extends Component {
     console.log(recipes);
     return recipes.map((eachRecipe) => {
       return (
-        <Card className = 'recipe-card' key = {eachRecipe.recipe.label}>
+        <Card className="recipe-card" key={eachRecipe.recipe.label}>
           <CardImg
             className="foodImg"
             top
@@ -55,7 +51,9 @@ class Recipes extends Component {
           <CardBody>
             <CardTitle>{eachRecipe.recipe.label}</CardTitle>
             <Button color="success" className="recipeBtn">
-              <a className = "recipe-link" href={eachRecipe.recipe.url}>Recipe!</a>
+              <a className="recipe-link" href={eachRecipe.recipe.url}>
+                Recipe!
+              </a>
             </Button>{" "}
           </CardBody>
         </Card>
@@ -67,14 +65,15 @@ class Recipes extends Component {
     console.log(this.state.recipes);
     return (
       <div>
-        <form onSubmit={this.recipeSearch}>
+        <form className = "recipeSearchForm" onSubmit={this.recipeSearch}>
           <input
+            className="recipeSearch"
             type="text"
             placeholder="Search Recipes!"
             onChange={(e) => this.newQuery(e)}
           />
-          <input type="submit" />
-          {this.displayRecipes()}
+          <input className="submit-btn" type="submit" value="search!"></input>
+          <section>{this.displayRecipes()}</section>
         </form>
       </div>
     );
@@ -83,8 +82,3 @@ class Recipes extends Component {
 
 export default Recipes;
 
-{
-  /* <ListGroup key={eachRecipe.recipe.calories}>
-          <ListGroupItem><a href = {eachRecipe.recipe.url}> <img src = {eachRecipe.recipe.image} alt = "recipe"></img></a></ListGroupItem>
-        </ListGroup> */
-}
