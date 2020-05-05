@@ -203,6 +203,24 @@ add-beer-form {
  .letter-selector-btn {
    background: none !important;
    border: none !important;
-   margin: 0.2em !important;
+   margin: 0.5em !important;
    padding: 0em !important
+ }
+
+ .submit-btn {
+   background: none !important;
+   border: none !important;
+ }
+
+ .submit-btn:hover {
+  color: orange !important;
+  text-decoration: underline 1px orange !important;
+  border-bottom: 1px orange !important;
+ }
+
+ .cocktailSearch {
+   border-top: none !important;
+   border-left: none !important;
+   border-right: none !important;
+   text-align: center !important;
  }

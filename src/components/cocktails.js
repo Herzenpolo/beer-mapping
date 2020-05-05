@@ -70,7 +70,7 @@ class Cocktails extends Component {
               placeholder="Search Cocktails!"
               onChange={(e) => this.onChangeMethod(e)}
             ></input>
-            <input type="submit"></input>
+            <input className = "submit-btn" type="submit" value='search!'></input>
           </form>
         </section>
         <section className="letter-selector">
