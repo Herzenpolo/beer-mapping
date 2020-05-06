@@ -8,7 +8,7 @@ class Gallery extends Component {
     }
 
  gallery = () => {
-     return this .props.gallery.map(eachPhoto => {
+     return this.props.gallery.map(eachPhoto => {
          return (
              <ul>
                  <li key={eachPhoto.id}>

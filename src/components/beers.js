@@ -15,7 +15,7 @@ class Beers extends Component {
       return (
         <ListGroup key={eachBeer.name}>
           <ListGroupItem>
-            <Link className="beerList" to={`/beer/${eachBeer.name}`}>
+            <Link className="beerList" to={`/beer/${eachBeer.name.replace(/ *\([^)]*\) */g, "")}`}>
               {eachBeer.name}
             </Link>
           </ListGroupItem>
