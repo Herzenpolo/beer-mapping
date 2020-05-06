@@ -122,7 +122,7 @@ class Home extends Component {
           <CardTitle className = "item-of-the-day-name"> {this.state.recipesLabel} </CardTitle>
          
             {" "}
-            <a className="RandoHome dailyBtn" href={this.state.recipeUrl}>
+            <a className="RandoHome dailyBtn" href={this.state.recipeUrl} target = "_blank" rel="noopener noreferrer">
               Recipe!
             </a>
           

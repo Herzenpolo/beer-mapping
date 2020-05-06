@@ -51,7 +51,7 @@ class Recipes extends Component {
           <CardBody>
             <CardTitle>{eachRecipe.recipe.label}</CardTitle>
             <Button color="success" className="recipeBtn">
-              <a className="recipe-link" href={eachRecipe.recipe.url}>
+              <a className="recipe-link" href={eachRecipe.recipe.url} target = "_blank" rel="noopener noreferrer">
                 Recipe!
               </a>
             </Button>{" "}

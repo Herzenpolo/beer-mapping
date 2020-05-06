@@ -231,3 +231,9 @@ add-beer-form {
  .recipeSearchForm {
    text-align: center;
  }
+
+ .beerSearch {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }

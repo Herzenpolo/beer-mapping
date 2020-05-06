@@ -62,12 +62,14 @@ class Beers extends Component {
     console.log(this.state);
     return (
       <div>
-        <input
-          className="recipeSearch"
-          type="text"
-          placeholder="Search Beers!"
-          onChange={(e) => this.props.beerSearch(e)}
-        ></input>
+       <section className = 'beerSearch'>
+          <input
+            className="recipeSearch"
+            type="text"
+            placeholder="Search Beers!"
+            onChange={(e) => this.props.beerSearch(e)}
+          ></input>
+       </section>
         {/* <button onClick={this.clickMethod}> Add Beer </button> */}
         {/* {this.addBeerForm()} */}
         {this.displayBeers()}
