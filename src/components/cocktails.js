@@ -12,6 +12,13 @@ class Cocktails extends Component {
     cocktailQuery: "",
   };
 
+componentDidMount = () => {
+  Axios.get(cocktailUrl + "f=a", cocktailKey)
+      .then((res3) => this.setState({ cocktails: res3.data.drinks }))
+      .catch((err3) => console.log(err3));
+}
+
+
   displayCocktail = () => {
     if(this.state.cocktails !== null){
     let cocktails = [...this.state.cocktails];
@@ -39,6 +46,7 @@ class Cocktails extends Component {
     alert ('no cocktails starting with this letter, select another')
   }
   };
+
 
   clickMethod = (e) => {
     Axios.get(cocktailUrl + "f=" + e.target.value, cocktailKey)
